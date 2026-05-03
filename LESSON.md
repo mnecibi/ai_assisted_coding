@@ -53,15 +53,6 @@ If your session looks like that, you've internalized lessons 1–5.
 | `/review` | `/review` | Review a pull request locally. Natural next step after the security reviewer flags issues. |
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/agents` | `/agent` | Manage / switch / inspect agent configurations. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
 ## Reference
 
 This is the **solution** branch — the finished `Author` feature is already in place. Check `git log -- src/main/java/com/learnclaude/library/author/` to see what was added. The tool configs inherited from lesson 5 are the Claude Code track; the equivalent Codex configs (`AGENTS.md`, `.codex/`, `.agents/skills/`) live on `lesson-05-subagents-solution` if you want to see how the same workflow maps to Codex.
