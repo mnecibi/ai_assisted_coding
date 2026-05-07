@@ -83,12 +83,6 @@ Hints:
 | `/mcp` | `/mcp` | List MCP server connections and manage OAuth. |
 | `claude mcp list` | `codex mcp list` | List configured servers from the shell. |
 | `/permissions` | `/approvals` | MCP tools obey the same permission rules as built-ins; this is where you allow/deny `mcp__actuator__*`. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-<<<<<<< HEAD
-=======
-
->>>>>>> 8322cf9 (Lesson 03 solution: add Codex hooks at .codex/config.toml (TOML mirror of .claude/settings.json))
 ## Reference
 
 - [MCP overview](https://modelcontextprotocol.io)
