@@ -71,29 +71,6 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 | `/permissions` | `/approvals` | MCP tools obey the same permission rules as built-ins; this is where you allow/deny `mcp__filesystem__*`. |
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
-<<<<<<< HEAD
-=======
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/hooks` | `/hooks` | View hook configs and (in Codex) trust the project's hooks. |
-| `/permissions` | `/approvals` | Manage allow/ask/deny rules. Companion lever to `PreToolUse` blocking. |
-| `/doctor` | `codex doctor` | Diagnose installation and settings. Useful when a hook silently fails to fire. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/skills` | `/skills` | List available skills. Confirms your `new-rest-endpoint` skill is discovered. |
-| `/plugin` | `/skill-installer` | Manage installable skill packages from outside the repo. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
->>>>>>> 06e558f (Lesson 02: add Related commands section)
 ## Reference
 
 This is the **solution** branch — the finished `Author` feature is already in place. Check `git log -- src/main/java/com/learnclaude/library/author/` to see what was added. The tool configs inherited from lesson 5 are the Claude Code track; the equivalent Codex configs (`AGENTS.md`, `.codex/`, `.agents/skills/`) live on `lesson-05-subagents-solution` if you want to see how the same workflow maps to Codex.
