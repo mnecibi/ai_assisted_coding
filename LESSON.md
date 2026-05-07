@@ -92,53 +92,6 @@ Hints:
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/hooks` | `/hooks` | View hook configs and (in Codex) trust the project's hooks. |
-| `/permissions` | `/approvals` | Manage allow/ask/deny rules. Companion lever to `PreToolUse` blocking. |
-| `/doctor` | `codex doctor` | Diagnose installation and settings. Useful when a hook silently fails to fire. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/skills` | `/skills` | List available skills. Confirms your `new-rest-endpoint` skill is discovered. |
-| `/plugin` | `/skill-installer` | Manage installable skill packages from outside the repo. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/init` | `codex init` | Initialize a project with a memory file. |
-| `/memory` | (edit `AGENTS.md` directly) | Edit/inspect the memory file from inside the session. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/hooks` | `/hooks` | View hook configs and (in Codex) trust the project's hooks. |
-| `/permissions` | `/approvals` | Manage allow/ask/deny rules. Companion lever to `PreToolUse` blocking. |
-| `/doctor` | `codex doctor` | Diagnose installation and settings. Useful when a hook silently fails to fire. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
-## Related commands
-
-| Command | What it does |
-|---|---|
-| `/skills` | List available skills; press `t` to sort by token cost. Confirms your `new-rest-endpoint` skill is discovered. |
-| `/plugin` | Manage plugins, the distribution channel for skills beyond `.claude/skills/`. |
-
-See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
-
 ## Reference
 
 - [MCP overview](https://modelcontextprotocol.io)
