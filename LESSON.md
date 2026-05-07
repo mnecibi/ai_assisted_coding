@@ -55,10 +55,8 @@ If your session looks like that, you've internalized lessons 1–5.
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 ## Reference
 
-The solution branch shows what the resulting tree looks like:
-
-```bash
-git diff lesson-06-capstone..lesson-06-capstone-solution
-```
-
-Don't peek until you've tried the workflow yourself — the muscle memory is the point.
+- [Subagents documentation](https://docs.claude.com/claude-code/sub-agents)
+- Compare your subagents to the solution:
+  ```bash
+  git diff lesson-05-subagents..lesson-05-subagents-solution -- .claude/agents/
+  ```
