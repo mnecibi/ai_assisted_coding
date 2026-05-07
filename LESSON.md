@@ -20,7 +20,7 @@ It must satisfy these constraints, in order:
 - [ ] **Let the lesson-3 hooks fire.** Watch `mvn -q compile` run after each Java edit. Watch `mvn -q test` run when the assistant wraps up. If the hooks don't fire, your hooks config from lesson 3 is missing or broken (or, for Codex, you haven't run `/hooks` to trust the project).
 - [ ] **Honor the project-memory file.** Any DTO the assistant creates must be a Java record. Spot-check the diff: `git diff main..HEAD` should show no `class FooDto { ... }` with getters/setters.
 - [ ] **Have the lesson-5 subagent review the result.** Invoke `spring-security-reviewer` against `AuthorController`. Read the findings — they should match what you'd flag yourself for an unauthenticated controller.
-- [ ] **Use the MCP server.** Ask the assistant to "list every `@RestController` in the project" before and after. Both calls should show the MCP filesystem server being invoked rather than `Grep` over the whole repo.
+- [ ] **Use the MCP server.** Ask the assistant to "list every `@RestController` in the project" before and after. Both calls should show the MCP  server being invoked.
 
 ## A suggested session
 
@@ -35,28 +35,6 @@ You:        Auth is out of scope for this exercise — leave the finding for fol
 ```
 
 If your session looks like that, you've internalized lessons 1–5.
-
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/mcp` | `/mcp` | List MCP server connections and manage OAuth. |
-| `claude mcp list` | `codex mcp list` | List configured servers from the shell. |
-| `/permissions` | `/approvals` | MCP tools obey the same permission rules as built-ins; this is where you allow/deny `mcp__filesystem__*`. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
-<<<<<<< HEAD
-=======
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/hooks` | `/hooks` | View hook configs and (in Codex) trust the project's hooks. |
-| `/permissions` | `/approvals` | Manage allow/ask/deny rules. Companion lever to `PreToolUse` blocking. |
-| `/doctor` | `codex doctor` | Diagnose installation and settings. Useful when a hook silently fails to fire. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
 ## Related commands
 
