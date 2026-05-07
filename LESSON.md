@@ -68,6 +68,15 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
+## Related commands
+
+| Command | What it does |
+|---|---|
+| `/mcp` | Manage MCP server connections and OAuth. Replaces the `claude mcp list` reference above. |
+| `/permissions` | MCP tools obey the same permission rules as built-ins; this is where you allow/deny `mcp__filesystem__*`. |
+
+See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
+
 ## Reference
 
 - [Subagents documentation](https://docs.claude.com/claude-code/sub-agents)
