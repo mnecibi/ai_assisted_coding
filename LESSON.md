@@ -48,6 +48,18 @@ If your session looks like that, you've internalized lessons 1–5.
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
+## Related commands
+
+| Command | What it does |
+|---|---|
+| `/skills` | List available skills (introduced in lesson 2). The capstone exercises your `new-rest-endpoint` skill. |
+| `/hooks` | View hook configurations (introduced in lesson 3). The capstone relies on the compile-on-edit, test-on-stop, and pom guard hooks. |
+| `/mcp` | Manage MCP server connections (introduced in lesson 4). The capstone uses the filesystem MCP server. |
+| `/agents` | Manage agent configurations (introduced in lesson 5). The capstone calls the `spring-security-reviewer` and `test-writer` subagents. |
+| `/review` | Review a pull request locally. Natural next step after the `spring-security-reviewer` subagent flags issues. |
+
+See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
+
 ## Reference
 
 This is the **solution** branch — the finished `Author` feature is already in place. Check `git log -- src/main/java/com/learnclaude/library/author/` to see what was added. The tool configs inherited from lesson 5 are the Claude Code track; the equivalent Codex configs (`AGENTS.md`, `.codex/`, `.agents/skills/`) live on `lesson-05-subagents-solution` if you want to see how the same workflow maps to Codex.
