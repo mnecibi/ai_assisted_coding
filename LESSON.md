@@ -60,6 +60,14 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
+## Related commands
+
+| Command | What it does |
+|---|---|
+| `/agents` | Manage agent configurations. The interactive surface for the `.claude/agents/*.md` files you author in this lesson. |
+
+See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
+
 ## Reference
 
 - [Subagents documentation](https://docs.claude.com/claude-code/sub-agents)
