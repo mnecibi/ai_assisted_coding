@@ -92,6 +92,15 @@ Hints:
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
+## Related commands
+
+| Command | What it does |
+|---|---|
+| `/init` | Initialize a project with a `CLAUDE.md` guide. The bootstrap for the file you're hand-writing in this lesson. |
+| `/memory` | Edit `CLAUDE.md` memory files, toggle auto-memory, view auto-memory entries. |
+
+See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
+
 ## Reference
 
 - [MCP overview](https://modelcontextprotocol.io)
