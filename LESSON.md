@@ -47,7 +47,6 @@ If your session looks like that, you've internalized lessons 1–5.
 | `/review` | `/review` | Review a pull request locally. Natural next step after the security reviewer flags issues. |
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
 ## Reference
 
 - [Subagents documentation](https://docs.claude.com/claude-code/sub-agents)
