@@ -36,11 +36,27 @@ You:        Auth is out of scope for this exercise — leave the finding for fol
 
 If your session looks like that, you've internalized lessons 1–5.
 
-## When you're done
+## Related commands
 
-- [ ] `mvn -q test` — at least 4 tests, all green (Book × 2 + Author × 2 minimum).
-- [ ] `git diff main..HEAD` shows the new `author/` package and its test.
-- [ ] You did not author any of the `Author` source files by hand.
+| Claude Code | Codex | What it does |
+|---|---|---|
+| `/mcp` | `/mcp` | List MCP server connections and manage OAuth. |
+| `claude mcp list` | `codex mcp list` | List configured servers from the shell. |
+| `/permissions` | `/approvals` | MCP tools obey the same permission rules as built-ins; this is where you allow/deny `mcp__filesystem__*`. |
+
+See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
+
+<<<<<<< HEAD
+=======
+## Related commands
+
+| Claude Code | Codex | What it does |
+|---|---|---|
+| `/hooks` | `/hooks` | View hook configs and (in Codex) trust the project's hooks. |
+| `/permissions` | `/approvals` | Manage allow/ask/deny rules. Companion lever to `PreToolUse` blocking. |
+| `/doctor` | `codex doctor` | Diagnose installation and settings. Useful when a hook silently fails to fire. |
+
+See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
 ## Related commands
 
