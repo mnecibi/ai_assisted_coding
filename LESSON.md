@@ -48,6 +48,15 @@ If your session looks like that, you've internalized lessons 1–5.
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
+## Related commands
+
+| Command | What it does |
+|---|---|
+| `/init` | Initialize a project with a `CLAUDE.md` guide. The bootstrap for the file you're hand-writing in this lesson. |
+| `/memory` | Edit `CLAUDE.md` memory files, toggle auto-memory, view auto-memory entries. |
+
+See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
+
 ## Reference
 
 This is the **solution** branch — the finished `Author` feature is already in place. Check `git log -- src/main/java/com/learnclaude/library/author/` to see what was added. The tool configs inherited from lesson 5 are the Claude Code track; the equivalent Codex configs (`AGENTS.md`, `.codex/`, `.agents/skills/`) live on `lesson-05-subagents-solution` if you want to see how the same workflow maps to Codex.
