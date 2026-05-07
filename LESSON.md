@@ -68,6 +68,15 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
+## Related commands
+
+| Command | What it does |
+|---|---|
+| `/mcp` | Manage MCP server connections and OAuth. Replaces the `claude mcp list` reference above. |
+| `/permissions` | MCP tools obey the same permission rules as built-ins; this is where you allow/deny `mcp__filesystem__*`. |
+
+See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
+
 ## Reference
 
 This is the **solution** branch — the finished `Author` feature is already in place. Check `git log -- src/main/java/com/learnclaude/library/author/` to see what was added. The tool configs inherited from lesson 5 are the Claude Code track; the equivalent Codex configs (`AGENTS.md`, `.codex/`, `.agents/skills/`) live on `lesson-05-subagents-solution` if you want to see how the same workflow maps to Codex.
