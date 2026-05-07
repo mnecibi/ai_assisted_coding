@@ -71,6 +71,7 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 | `/permissions` | `/approvals` | MCP tools obey the same permission rules as built-ins; this is where you allow/deny `mcp__filesystem__*`. |
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
+
 ## Reference
 
 This is the **solution** branch — the finished `Author` feature is already in place. Check `git log -- src/main/java/com/learnclaude/library/author/` to see what was added. The tool configs inherited from lesson 5 are the Claude Code track; the equivalent Codex configs (`AGENTS.md`, `.codex/`, `.agents/skills/`) live on `lesson-05-subagents-solution` if you want to see how the same workflow maps to Codex.
