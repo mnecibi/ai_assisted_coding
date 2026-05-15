@@ -92,16 +92,6 @@ Hints:
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
-## Related commands
-
-| Command | What it does |
-|---|---|
-| `/hooks` | View hook configurations for tool events; verifies `.claude/settings.json` is loaded. |
-| `/permissions` | Manage allow/ask/deny rules. Companion lever to PreToolUse blocking. |
-| `/doctor` | Diagnose installation and settings; press `f` to have Claude fix issues. Useful when a hook silently fails to fire. |
-
-See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
-
 ## Reference
 
 - [MCP overview](https://modelcontextprotocol.io)
