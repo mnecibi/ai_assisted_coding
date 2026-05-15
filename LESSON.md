@@ -124,6 +124,10 @@ Tips:
 | `/agents` | `/agent` | Manage / switch / inspect agent configurations. |
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8322cf9 (Lesson 03 solution: add Codex hooks at .codex/config.toml (TOML mirror of .claude/settings.json))
 ## Reference
 
 - Claude Code subagents: <https://docs.claude.com/claude-code/sub-agents>
