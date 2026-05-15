@@ -74,7 +74,6 @@ Hints:
 ## How to verify
 
 1. **Claude Code:** start a fresh `claude` session and run `claude mcp list`. **Codex:** start `codex`, run `/mcp` (or from the shell: `codex mcp list`). You should see your `actuator` stub server listed (even if it's not actually reachable).
-
 2. (Optional, if you wired the actuator MCP server for real) Run `mvn spring-boot:run` in another terminal and ask: "what's the JVM uptime?" — the actuator MCP tool should fire.
 
 ## Related commands
