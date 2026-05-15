@@ -62,11 +62,11 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 
 ## Related commands
 
-| Command | What it does |
-|---|---|
-| `/agents` | Manage agent configurations. The interactive surface for the `.claude/agents/*.md` files you author in this lesson. |
+| Claude Code | Codex | What it does |
+|---|---|---|
+| `/agents` | `/agent` | Manage / switch / inspect agent configurations. |
 
-See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
+See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
 ## Reference
 
