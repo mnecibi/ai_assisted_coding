@@ -73,6 +73,11 @@ The body/system-prompt content is the same. The differences:
 - **Tool restriction.** Claude lists allowed tools (`tools: Read, Grep, Glob`); Codex uses `sandbox_mode = "read-only"` (closest analogue — TOML model is sandbox-based, not per-tool).
 - **Codex extras.** Codex agents can also set `model`, `model_reasoning_effort`, and `mcp_servers` per agent to override the parent session's defaults.
 
+### Why use an MCP server when the assistant already has `Read` and `Grep`?
+
+- **Scoping** — the filesystem server above is constrained to `./src`; the assistant can't accidentally read your home dir.
+- **Capability** — many MCP servers expose things assistants don't have natively (database queries, Jira, Linear, your internal API).
+- **Auditing** — MCP calls are first-class in transcripts; easier to review what an external integration touched.
 ### Invoking a subagent
 
 | Claude Code | Codex |
@@ -94,6 +99,11 @@ Define two subagents. Use the path/format that matches your tool — or both, so
 
 - [ ] **`spring-security-reviewer`** — reviews controllers for missing `@PreAuthorize` / `@Valid` / input validation. Read-only (Claude: `tools: Read, Grep, Glob`; Codex: `sandbox_mode = "read-only"`). Description should make the main agent auto-invoke it after controller edits ("Use proactively after changes to any `@RestController`").
 
+- [ ] **Add `management.endpoints.web.exposure.include: "*"`** to `src/main/resources/application.yml` so the actuator endpoints are reachable when the app runs. (You'll also need the `spring-boot-starter-actuator` dependency in `pom.xml` — but remember, the hook from lesson 3 will block the pom edit. Confirm with the user before doing it, then approve.)
+
+Hints:
+- The config is committed (team-wide). Per-user secrets (API tokens for hosted MCP servers) belong in environment variables referenced from the config — `${ENV_VAR}` in JSON, or `env_vars = ["ENV_VAR"]` in Codex TOML.
+- For Codex you can also add servers from the CLI: `codex mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem ./src`.
 - [ ] **`test-writer`** — writes JUnit 5 + MockMvc tests for a given controller, mirroring the style of `BookControllerTest`. Needs write access (Claude: `tools: Read, Glob, Write`; Codex: `sandbox_mode = "workspace-write"`). Description should trigger when the user asks for tests on a class/feature.
 
 Tips:
@@ -103,6 +113,7 @@ Tips:
 
 ## How to verify
 
+1. **Claude Code:** start a fresh `claude` session and run `claude mcp list`. **Codex:** start `codex`, run `/mcp` (or from the shell: `codex mcp list`). You should see `filesystem` (and your stub HTTP server, even if it's not actually reachable).
 1. **Security reviewer.** In a fresh session:
    ```
    Use the spring-security-reviewer subagent to audit BookController.
@@ -127,12 +138,13 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 
 ## Related commands
 
-| Command | What it does |
-|---|---|
-| `/mcp` | Manage MCP server connections and OAuth. Replaces the `claude mcp list` reference above. |
-| `/permissions` | MCP tools obey the same permission rules as built-ins; this is where you allow/deny `mcp__filesystem__*`. |
+| Claude Code | Codex | What it does |
+|---|---|---|
+| `/mcp` | `/mcp` | List MCP server connections and manage OAuth. |
+| `claude mcp list` | `codex mcp list` | List configured servers from the shell. |
+| `/permissions` | `/approvals` | MCP tools obey the same permission rules as built-ins; this is where you allow/deny `mcp__filesystem__*`. |
 
-See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
+See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
 ## Reference
 
