@@ -50,15 +50,15 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 
 ## Related commands
 
-| Command | What it does |
-|---|---|
-| `/skills` | List available skills (introduced in lesson 2). The capstone exercises your `new-rest-endpoint` skill. |
-| `/hooks` | View hook configurations (introduced in lesson 3). The capstone relies on the compile-on-edit, test-on-stop, and pom guard hooks. |
-| `/mcp` | Manage MCP server connections (introduced in lesson 4). The capstone uses the filesystem MCP server. |
-| `/agents` | Manage agent configurations (introduced in lesson 5). The capstone calls the `spring-security-reviewer` and `test-writer` subagents. |
-| `/review` | Review a pull request locally. Natural next step after the `spring-security-reviewer` subagent flags issues. |
+| Claude Code | Codex | What it does |
+|---|---|---|
+| `/skills` | `/skills` | List available skills (lesson 2). |
+| `/hooks` | `/hooks` | View / trust hook configurations (lesson 3). |
+| `/mcp` | `/mcp` | Manage MCP server connections (lesson 4). |
+| `/agents` | `/agent` | Manage agent configurations (lesson 5). |
+| `/review` | `/review` | Review a pull request locally. Natural next step after the security reviewer flags issues. |
 
-See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
+See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
 ## Reference
 
