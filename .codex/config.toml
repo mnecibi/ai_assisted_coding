@@ -5,8 +5,7 @@
 # hooks. Otherwise nothing here runs.
 #
 # The [hooks] sections mirror .claude/settings.json; the [mcp_servers.*]
-# sections mirror .mcp.json. Both tools share the same hook event model
-# (PreToolUse / PostToolUse / Stop, exit 2 to block).
+# sections mirror .mcp.json. Subagents live separately under .codex/agents/.
 
 # ============================================================
 # Hooks (lesson 3)
