@@ -191,7 +191,6 @@ Tips:
 | `/agents` | `/agent` | Manage / switch / inspect agent configurations. |
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
 ## Reference
 
