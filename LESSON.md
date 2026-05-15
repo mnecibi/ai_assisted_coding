@@ -134,7 +134,6 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 | `/permissions` | `/approvals` | MCP tools obey the same permission rules as built-ins; this is where you allow/deny `mcp__filesystem__*`. |
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
 ## Reference
 
 - Claude Code subagents: <https://docs.claude.com/claude-code/sub-agents>
