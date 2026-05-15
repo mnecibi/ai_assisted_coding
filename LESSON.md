@@ -125,16 +125,6 @@ Tips:
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/mcp` | `/mcp` | List MCP server connections and manage OAuth. |
-| `claude mcp list` | `codex mcp list` | List configured servers from the shell. |
-| `/permissions` | `/approvals` | MCP tools obey the same permission rules as built-ins; this is where you allow/deny `mcp__filesystem__*`. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
 ## Reference
 
 - Claude Code subagents: <https://docs.claude.com/claude-code/sub-agents>
