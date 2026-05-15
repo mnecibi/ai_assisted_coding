@@ -98,15 +98,6 @@ The assistant should choose to invoke the skill on its own. If it doesn't — if
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/init` | `codex init` | Initialize a project with a memory file. |
-| `/memory` | (edit `AGENTS.md` directly) | Edit/inspect the memory file from inside the session. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
 ## Reference
 
 - Claude Code skills: <https://docs.claude.com/claude-code/skills>
