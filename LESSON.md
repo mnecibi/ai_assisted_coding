@@ -92,15 +92,6 @@ Hints:
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
-## Related commands
-
-| Command | What it does |
-|---|---|
-| `/skills` | List available skills; press `t` to sort by token cost. Confirms your `new-rest-endpoint` skill is discovered. |
-| `/plugin` | Manage plugins, the distribution channel for skills beyond `.claude/skills/`. |
-
-See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
-
 ## Reference
 
 - [MCP overview](https://modelcontextprotocol.io)
