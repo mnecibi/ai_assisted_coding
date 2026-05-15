@@ -94,13 +94,13 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 
 ## Related commands
 
-| Command | What it does |
-|---|---|
-| `/hooks` | View hook configurations for tool events; verifies `.claude/settings.json` is loaded. |
-| `/permissions` | Manage allow/ask/deny rules. Companion lever to PreToolUse blocking. |
-| `/doctor` | Diagnose installation and settings; press `f` to have Claude fix issues. Useful when a hook silently fails to fire. |
+| Claude Code | Codex | What it does |
+|---|---|---|
+| `/hooks` | `/hooks` | View hook configs and (in Codex) trust the project's hooks. |
+| `/permissions` | `/approvals` | Manage allow/ask/deny rules. Companion lever to `PreToolUse` blocking. |
+| `/doctor` | `codex doctor` | Diagnose installation and settings. Useful when a hook silently fails to fire. |
 
-See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
+See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
 ## Reference
 
