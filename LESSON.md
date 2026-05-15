@@ -113,12 +113,12 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 
 ## Related commands
 
-| Command | What it does |
-|---|---|
-| `/init` | Initialize a project with a `CLAUDE.md` guide. The bootstrap for the file you're hand-writing in this lesson. |
-| `/memory` | Edit `CLAUDE.md` memory files, toggle auto-memory, view auto-memory entries. |
+| Claude Code | Codex | What it does |
+|---|---|---|
+| `/init` | `codex init` | Initialize a project with a memory file. |
+| `/memory` | (edit `AGENTS.md` directly) | Edit/inspect the memory file from inside the session. |
 
-See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
+See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
 ## Reference
 
