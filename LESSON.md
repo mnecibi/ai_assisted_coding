@@ -112,20 +112,8 @@ Tips:
 
 ## How to verify
 
-1. **Claude Code:** start a fresh `claude` session and run `claude mcp list`. **Codex:** start `codex`, run `/mcp` (or from the shell: `codex mcp list`). You should see `filesystem` (and your stub HTTP server, even if it's not actually reachable).
-1. **Security reviewer.** In a fresh session:
-   ```
-   Use the spring-security-reviewer subagent to audit BookController.
-   ```
-   It should flag: no `@PreAuthorize` anywhere, but `@Valid @RequestBody` is correctly applied. Output should be terse and file:line-anchored.
-
-2. **Auto-invocation.** Ask your assistant to add a new endpoint to `BookController` (e.g. `DELETE /books/{id}`). After the edit, the security reviewer should auto-trigger because of the "use proactively" cue in its description. If it doesn't, your description isn't strong enough — make the trigger more specific.
-
-3. **Test writer.** Ask:
-   ```
-   Write tests for AuthorController using the test-writer subagent.
-   ```
-   (You'll need to scaffold `AuthorController` first using the lesson-2 skill.) The subagent should produce a test file structurally identical to `BookControllerTest`.
+1. **Claude Code:** start a fresh `claude` session and run `claude mcp list`. **Codex:** start `codex`, run `/mcp` (or from the shell: `codex mcp list`). You should see your `actuator` stub server listed (even if it's not actually reachable).
+2. (Optional, if you wired the actuator MCP server for real) Run `mvn spring-boot:run` in another terminal and ask: "what's the JVM uptime?" — the actuator MCP tool should fire.
 
 ## Related commands
 
