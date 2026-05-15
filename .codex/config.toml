@@ -38,11 +38,6 @@ command = "mvn -q test 2>&1 | grep -E 'Tests run|BUILD' | tail -3"
 # MCP servers (lesson 4)
 # ============================================================
 
-# --- filesystem: STDIO MCP server scoped to ./src --------------------------
-[mcp_servers.filesystem]
-command = "npx"
-args = ["-y", "@modelcontextprotocol/server-filesystem", "./src"]
-
 # --- actuator: stub HTTP MCP server for Spring Boot actuator ---------------
 # In production, run an MCP HTTP server in front of Spring Boot Actuator so
 # the assistant can call /actuator/health, /actuator/metrics,
