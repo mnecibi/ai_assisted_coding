@@ -108,12 +108,12 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 
 ## Related commands
 
-| Command | What it does |
-|---|---|
-| `/skills` | List available skills; press `t` to sort by token cost. Confirms your `new-rest-endpoint` skill is discovered. |
-| `/plugin` | Manage plugins, the distribution channel for skills beyond `.claude/skills/`. |
+| Claude Code | Codex | What it does |
+|---|---|---|
+| `/skills` | `/skills` | List available skills. Confirms your `new-rest-endpoint` skill is discovered. |
+| `/plugin` | `/skill-installer` | Manage installable skill packages from outside the repo. |
 
-See [the full command reference](https://code.claude.com/docs/en/commands) for everything else.
+See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
 ## Reference
 
