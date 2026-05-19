@@ -73,10 +73,9 @@ The body/system-prompt content is the same. The differences:
 - **Tool restriction.** Claude lists allowed tools (`tools: Read, Grep, Glob`); Codex uses `sandbox_mode = "read-only"` (closest analogue — TOML model is sandbox-based, not per-tool).
 - **Codex extras.** Codex agents can also set `model`, `model_reasoning_effort`, and `mcp_servers` per agent to override the parent session's defaults.
 
-### Why use an MCP server when the assistant already has `Read` and `Grep`?
+### Why use an MCP server when the assistant already has `Bash` and `WebFetch`?
 
-- **Scoping** — the filesystem server above is constrained to `./src`; the assistant can't accidentally read your home dir.
-- **Capability** — many MCP servers expose things assistants don't have natively (database queries, Jira, Linear, your internal API).
+- **Capability** — MCP servers expose things assistants don't have natively (database queries, Jira, Linear, your internal API, live app metrics).
 - **Auditing** — MCP calls are first-class in transcripts; easier to review what an external integration touched.
 ### Invoking a subagent
 
