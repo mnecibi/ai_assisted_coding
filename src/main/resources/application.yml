@@ -11,3 +11,17 @@ spring:
   h2:
     console:
       enabled: true
+  ai:
+    mcp:
+      server:
+        name: actuator-mcp
+        version: 0.0.1
+        protocol: STREAMABLE
+        streamable-http:
+          mcp-endpoint: /actuator-mcp
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
