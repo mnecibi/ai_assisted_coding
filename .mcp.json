@@ -1,17 +1,9 @@
 {
   "mcpServers": {
-    "filesystem": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "./src"
-      ]
-    },
     "actuator": {
       "type": "http",
       "url": "http://localhost:8080/actuator-mcp",
-      "_comment": "Stub. In production, run an MCP HTTP server in front of Spring Boot Actuator so Claude can call /actuator/health, /actuator/metrics, /actuator/loggers as tools. See https://github.com/modelcontextprotocol/servers for HTTP-server examples."
+      "_comment": "Real MCP server: the Spring Boot app serves an MCP streamable-HTTP endpoint at /actuator-mcp (spring-ai-starter-mcp-server-webmvc) exposing health/jvmUptimeSeconds/metric as tools backed by Actuator. Start it with `mvn spring-boot:run`, then `/mcp` reconnects. Tools: src/main/java/com/learnclaude/library/actuator/."
     }
   }
 }
