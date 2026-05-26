@@ -106,24 +106,6 @@ If a hook misbehaves, run `claude --debug` or `codex --debug` to see the exact e
 
 See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
 
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/skills` | `/skills` | List available skills. Confirms your `new-rest-endpoint` skill is discovered. |
-| `/plugin` | `/skill-installer` | Manage installable skill packages from outside the repo. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
-## Related commands
-
-| Claude Code | Codex | What it does |
-|---|---|---|
-| `/init` | `codex init` | Initialize a project with a memory file. |
-| `/memory` | (edit `AGENTS.md` directly) | Edit/inspect the memory file from inside the session. |
-
-See the full command reference for [Claude Code](https://docs.claude.com/claude-code) or [Codex](https://developers.openai.com/codex/cli).
-
 ## Reference
 
 - Claude Code hooks: <https://docs.claude.com/claude-code/hooks>
