@@ -39,7 +39,7 @@ An MCP server can be a binary, a Python script, an `npx` invocation, or a remote
   "mcpServers": {
     "actuator": {
       "type": "http",
-      "url": "http://localhost:8080/actuator"
+      "url": "http://localhost:8080/actuator-mcp"
     }
   }
 }
@@ -49,10 +49,10 @@ An MCP server can be a binary, a Python script, an `npx` invocation, or a remote
 ```toml
 [mcp_servers.actuator]
 type = "http"
-url = "http://localhost:8080/actuator"
+url = "http://localhost:8080/actuator-mcp"
 ```
 
-After committing this, anyone running the assistant in the repo gets an `actuator` MCP server that can call into your running Spring Boot service (e.g. `mcp__actuator__health`, `mcp__actuator__metrics`).
+After committing this, anyone running the assistant in the repo gets an `actuator` MCP server that can call into your running Spring Boot service (e.g. `mcp__actuator__health`, `mcp__actuator__jvmUptimeSeconds`).
 
 ### Why use an MCP server when the assistant already has `Bash` and `WebFetch`?
 
@@ -64,7 +64,7 @@ After committing this, anyone running the assistant in the repo gets an `actuato
 
 Add MCP config (`.mcp.json` for Claude, or `[mcp_servers.*]` in `.codex/config.toml` for Codex — or both) with the following server entry.
 
-- [ ] **A stub for an HTTP MCP server** pointed at `http://localhost:8080/actuator` (Spring Boot's actuator endpoints). You don't need to actually run the actuator MCP server in this lesson; the goal is to see the shape of an HTTP-based config and learn how the assistant would call into a running Java service. A real production wire-up would expose `/actuator/metrics` and `/actuator/health` as tools.
+- [ ] **A stub for an HTTP MCP server** pointed at `http://localhost:8080/actuator-mcp` (the app's MCP endpoint, backed by Spring Boot Actuator). You don't need to actually run the actuator MCP server in this lesson; the goal is to see the shape of an HTTP-based config and learn how the assistant would call into a running Java service. A real production wire-up would expose `/actuator/metrics` and `/actuator/health` as tools.
 
 - [ ] **Add `management.endpoints.web.exposure.include: "*"`** to `src/main/resources/application.yml` so the actuator endpoints are reachable when the app runs. (You'll also need the `spring-boot-starter-actuator` dependency in `pom.xml` — but remember, the hook from lesson 3 will block the pom edit. Confirm with the user before doing it, then approve.)
 
