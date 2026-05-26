@@ -9,20 +9,22 @@
 # convention (exit 0 = continue, exit 2 = block with stderr as the reason).
 
 # --- PreToolUse: guard against pom.xml edits -------------------------------
+[features]
+hooks = true
+
 [[hooks.PreToolUse]]
 matcher = "Edit|Write|MultiEdit"
 
 [[hooks.PreToolUse.hooks]]
 type = "command"
-command = "jq -r '.tool_input.file_path // \"\"' | grep -q 'pom\\.xml$' && { echo 'pom.xml edits require human review — please confirm with the user before changing Maven config.' >&2; exit 2; } || exit 0"
-
+command = "jq -r '.tool_input.command // \"\"' | grep -q 'pom\\.xml' && { echo 'pom.xml edits require human review — please confirm with the user before changing Maven config.' >&2; exit 2; } || exit 0"
 # --- PostToolUse: auto-compile after a .java edit --------------------------
 [[hooks.PostToolUse]]
 matcher = "Edit|Write|MultiEdit"
 
 [[hooks.PostToolUse.hooks]]
 type = "command"
-command = "jq -r '.tool_input.file_path // \"\"' | grep -qE '\\.java$' && mvn -q compile 2>&1 | tail -20 || exit 0"
+command = "jq -r '.tool_input.command // \"\"' | grep -qE '\\.java$' && mvn -q compile 2>&1 | tail -20 || exit 0"
 
 # --- Stop: run the full test suite when the assistant wraps up -------------
 [[hooks.Stop]]
