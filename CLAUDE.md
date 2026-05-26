@@ -7,7 +7,8 @@ This file is read by Claude Code at session start. A mirror copy of the same con
 ## Stack
 
 - Java 21
-- Spring Boot 3.3.x (web, data-jpa, validation)
+- Spring Boot 3.4.x (web, data-jpa, validation, actuator)
+- Spring AI 1.1.x MCP server (`spring-ai-starter-mcp-server-webmvc`) — the app serves an MCP streamable-HTTP endpoint at `/actuator-mcp` exposing Actuator data as tools (lesson 4)
 - H2 in-memory database (no external DB needed)
 - JUnit 5 + Spring Boot test
 
