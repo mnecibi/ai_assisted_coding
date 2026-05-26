@@ -38,13 +38,23 @@ command = "mvn -q test 2>&1 | grep -E 'Tests run|BUILD' | tail -3"
 # MCP servers (lesson 4)
 # ============================================================
 
-# --- actuator: stub HTTP MCP server for Spring Boot actuator ---------------
-# In production, run an MCP HTTP server in front of Spring Boot Actuator so
-# the assistant can call /actuator/health, /actuator/metrics,
-# /actuator/loggers as tools. See
-# https://github.com/modelcontextprotocol/servers for HTTP-server examples.
+# --- actuator: HTTP MCP server backed by Spring Boot Actuator --------------
+# Real, working server. The Spring Boot app itself serves an MCP
+# streamable-HTTP endpoint at /actuator-mcp (spring-ai-starter-mcp-server-webmvc),
+# exposing health / jvmUptimeSeconds / metric as tools backed by Actuator.
+# Start the app first: `mvn spring-boot:run`. See
+# src/main/java/com/learnclaude/library/actuator/ for the @Tool methods.
 [mcp_servers.actuator]
 url = "http://localhost:8080/actuator"
+
+[mcp_servers.actuator.tools.health]
+approval_mode = "approve"
+
+[mcp_servers.actuator.tools.jvmUptimeSeconds]
+approval_mode = "approve"
+
+[mcp_servers.actuator.tools.metric]
+approval_mode = "approve"
 
 # Codex CLI project config — hooks for the learn-ai-coding course (lesson 3).
 #
