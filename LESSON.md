@@ -15,25 +15,12 @@ A subagent is **a worker dispatched to a thread pool**. Same JVM, isolated stack
 Two reasons you'd dispatch instead of doing it yourself:
 
 1. **Context isolation** — the main agent's context fills up with code, tool results, and conversation history. A subagent starts fresh: a small brief, no prior conversation. Useful for long, isolated jobs.
-1. **Context isolation** — the main agent's context fills up with code, tool results, and conversation history. A subagent starts fresh: a small brief, no prior conversation. Useful for long, isolated jobs.
 2. **Specialization** — you can give the subagent a system prompt that turns it into a focused expert (security reviewer, test writer, code archaeologist). The main agent stays general-purpose.
 
 If you've used Java's `ForkJoinPool` to fan out independent work, you already understand the model.
 
 ## The concept
 
-### Where the file lives
-
-| Tool | File | Format |
-|---|---|---|
-| **Claude Code** | `.claude/agents/<name>.md` | Markdown with YAML frontmatter |
-| **Codex** | `.codex/agents/<name>.toml` | TOML |
-
-Both tools support a project scope (committed) and a personal scope (`~/.claude/agents/` or `~/.codex/agents/`). Both let you restrict what the subagent can do.
-
-### Tiny example
-
-**Claude Code (`.claude/agents/spring-security-reviewer.md`):**
 ### Where the file lives
 
 | Tool | File | Format |
@@ -134,10 +121,8 @@ The body/system-prompt content is the same. The differences:
 
 In both tools, the `description` field is what triggers auto-invocation — write it for the *triggering situation*, not the agent's identity.
 
-### When NOT to use a subagent
+### When NOT to use a subagent 
 
-- For a 30-second task. Spinning one up costs latency and tokens.
-- When you need a back-and-forth conversation. Subagents return one result; they're fire-and-forget.
 - For a 30-second task. Spinning one up costs latency and tokens.
 - When you need a back-and-forth conversation. Subagents return one result; they're fire-and-forget.
 - When the task needs full project context. Subagents start fresh — they don't see your conversation history.
@@ -154,13 +139,10 @@ Hints:
 - The config is committed (team-wide). Per-user secrets (API tokens for hosted MCP servers) belong in environment variables referenced from the config — `${ENV_VAR}` in JSON, or `env_vars = ["ENV_VAR"]` in Codex TOML.
 - For Codex you can also add servers from the CLI: `codex mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem ./src`.
 - [ ] **`test-writer`** — writes JUnit 5 + MockMvc tests for a given controller, mirroring the style of `BookControllerTest`. Needs write access (Claude: `tools: Read, Glob, Write`; Codex: `sandbox_mode = "workspace-write"`). Description should trigger when the user asks for tests on a class/feature.
-- [ ] **`test-writer`** — writes JUnit 5 + MockMvc tests for a given controller, mirroring the style of `BookControllerTest`. Needs write access (Claude: `tools: Read, Glob, Write`; Codex: `sandbox_mode = "workspace-write"`). Description should trigger when the user asks for tests on a class/feature.
 
 Tips:
 - Keep the system prompt **focused**. A subagent that does five things does none of them well. Split into two if you're tempted.
-- Keep the system prompt **focused**. A subagent that does five things does none of them well. Split into two if you're tempted.
 - Spell out the *output format* in the prompt. "Report as: file:line — severity — issue" beats "report findings clearly".
-- For the security reviewer, lock down to read-only — reviewers shouldn't ship fixes. That's a separate workflow.
 - For the security reviewer, lock down to read-only — reviewers shouldn't ship fixes. That's a separate workflow.
 
 ## How to verify
@@ -193,10 +175,7 @@ See the full command reference for [Claude Code](https://docs.claude.com/claude-
 
 - Claude Code subagents: <https://docs.claude.com/claude-code/sub-agents>
 - Codex subagents: <https://developers.openai.com/codex/subagents>
-- Claude Code subagents: <https://docs.claude.com/claude-code/sub-agents>
-- Codex subagents: <https://developers.openai.com/codex/subagents>
 - Compare your subagents to the solution:
   ```bash
-  git diff lesson-05-subagents..lesson-05-subagents-solution -- .claude/agents/ .codex/agents/
   git diff lesson-05-subagents..lesson-05-subagents-solution -- .claude/agents/ .codex/agents/
   ```
